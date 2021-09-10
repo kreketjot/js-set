@@ -13,12 +13,12 @@ export default class Team {
       throw new Error('This member has already been added');
     }
     this.members.add(member);
-    return true;
+    return this.members;
   }
 
   addAll(...members) {
     members.forEach((member) => this.members.add(member));
-    return true;
+    return this.members;
   }
 
   toArray() {
