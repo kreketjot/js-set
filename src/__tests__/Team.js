@@ -16,7 +16,8 @@ test('creating empty team', () => expect(team.members.size).toBe(0));
 test('adding not character to team', () => expect(() => team.add(-4)).toThrow('Only characters can be added'));
 
 test('adding new character to team', () => {
-  const result = team.add(poveq) && team.members.has(poveq) && team.members.size === 1;
+  team.add(poveq);
+  const result = team.members.has(poveq) && team.members.size === 1;
   expect(result).toBe(true);
 });
 
